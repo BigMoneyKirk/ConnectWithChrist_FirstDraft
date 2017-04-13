@@ -1,4 +1,7 @@
 # ConnectWithChrist
+
+## Intro
+[comment]: <> (11:02 PM EST 4/12/2017)
 The beginning of my future.
 
 I seriously feel like this is the start of everything beautiful that I have ever dreamed of.
