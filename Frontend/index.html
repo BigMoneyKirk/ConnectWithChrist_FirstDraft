@@ -24,7 +24,8 @@
           <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
             <ul class="nav navbar-nav">
               <!--TODO: Nav bar needs to be pruned; was designed this way for easier navigation while developing.-->
-              <li><a ui-sref="/">Home</a></li>
+              <li><a ui-sref="home">Home</a></li>
+              <li><a ui-sref="profile">Profile</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -32,6 +33,7 @@
                 <a ui-sref="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a ui-sref="/examsettings">Edit Profile</a></li>
+                  <li><a ui-sref="/about">About</a></li>
                   <li class="divider"></li>
                   <li><a ui-sref="#">Separated link</a></li>
                 </ul>

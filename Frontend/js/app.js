@@ -16,9 +16,9 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
                 controllerAs: 'vm'  // I believe what is used in the loginCtrl to grab info about the user from their email
             })
             // if user is an associate, this is the first state they will see
-            .state('associateHome', {
-                url: '/associateHome',
-                templateUrl: 'views/associateview_intro.html',
+            .state('home', {
+                url: '/home',
+                templateUrl: 'views/newsfeed.html',
                 controller: 'associateWelcomeCtrl'
             })
             /* from the list of exams from associateHome, this state presents the

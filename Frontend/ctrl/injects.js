@@ -116,3 +116,12 @@ function HomeInject(UserService, getBatchInfoService, $rootScope, $scope, $locat
     getBatchInfoService.getBatch($rootScope.globals.currentUser.email, successFunction, errorFunction);
 
 }
+
+
+/// Collapse NavBar Inject
+CollapseInject.$inject = ['$scope', '$location'];
+function CollapseInject($scope, $location) {
+        $scope.isNavCollapsed = true;
+        $scope.isCollapsed = false;
+        $scope.isCollapsedHorizontal = false;
+};
