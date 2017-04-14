@@ -196,3 +196,13 @@
 
 
  
+ ----------------------- Info (2017-04-14 14:20:18.3365) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 

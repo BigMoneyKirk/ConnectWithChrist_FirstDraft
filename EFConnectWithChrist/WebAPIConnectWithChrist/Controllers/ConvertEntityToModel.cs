@@ -13,7 +13,7 @@ namespace WebAPIConnectWithChrist.Controllers
     {
         public static MOD.User convertUser(DAL.User temp)
         {
-            return new MOD.User(temp.Firstname, temp.Lastname, temp.email, temp.password, temp.phoneNumber, temp.mainBusinessID, temp.UserType);
+            return new MOD.User(temp.UserID, temp.Firstname, temp.Lastname, temp.email, temp.password, temp.phoneNumber, temp.mainBusinessID, temp.dayAndTimeJoined, temp.UserType);
         }
     }
 }

@@ -45,10 +45,29 @@ namespace WebAPIConnectWithChrist.Controllers
             }
         }
 
-        // GET: api/Users
-        public IQueryable<User> GetUsers()
+        [HttpGet]
+        [ActionName("GetUserByEmail")]
+        public HttpResponseMessage GetUserByEmail(string email)
         {
-            return db.Users;
+            try
+            {
+                var temp = db.Users.ToList();
+                MOD.User user = new MOD.User();
+                foreach (var item in temp)
+                {
+                    if (item.email == email)
+                    {
+                        user = ConvertEntityToModel.convertUser(item);
+                        NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"{item.Firstname} {item.Lastname} is the user you are looking for."));
+                    }
+                }
+                return Request.CreateResponse(HttpStatusCode.OK, user);
+            }
+            catch (Exception ex)
+            {
+                NLogConfig.logger.Error(ex, $"There is no user with this email: {email}");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
         }
 
         // GET: api/Users/5

@@ -10,23 +10,17 @@ namespace WebAPIConnectWithChrist.Models
     {
         public User() { }
 
-        public string firstname;
-        public string lastname;
-        public string email;
-        public string password;
-        public string phonenumber;
-        public int mainbusinessid;
-        public int usertypeid;
-
-        public User(string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, int usertypeid)
+        public User(int userID, string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, DateTime dayAndTimeJoined, int usertypeid)
         {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.email = email;
-            this.password = password;
-            this.phonenumber = phonenumber;
-            this.mainbusinessid = mainbusinessid;
-            this.usertypeid = usertypeid;
+            UserID = userID;
+            Firstname = firstname;
+            Lastname = lastname;
+            Email = email;
+            Password = password;
+            PhoneNumber = phonenumber;
+            MainBusinessID = mainbusinessid;
+            DayAndTimeJoined = dayAndTimeJoined;
+            UserTypeID = usertypeid;
         }
 
         [Key]
@@ -38,7 +32,7 @@ namespace WebAPIConnectWithChrist.Models
         public string PhoneNumber { get; set; }
         public int MainBusinessID { get; set; }
         public string MainBusiness { get; set; }
-        public System.DateTime dayAndTimeJoined { get; set; }
+        public DateTime DayAndTimeJoined { get; set; }
         public int UserTypeID { get; set; }
         public string UserType { get; set; }
     }
