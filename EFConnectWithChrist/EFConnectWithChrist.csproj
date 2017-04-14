@@ -52,14 +52,68 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="MainBusiness.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelConnectWithChrist.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnectWithChrist.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelConnectWithChrist.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelConnectWithChrist.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConnectWithChrist.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserType.cs">
+      <DependentUpon>ModelConnectWithChrist.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModelConnectWithChrist.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelConnectWithChrist.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelConnectWithChrist.edmx.diagram">
+      <DependentUpon>ModelConnectWithChrist.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelConnectWithChrist.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConnectWithChrist.edmx</DependentUpon>
+      <LastGenOutput>ModelConnectWithChrist.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelConnectWithChrist.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConnectWithChrist.edmx</DependentUpon>
+      <LastGenOutput>ModelConnectWithChrist.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

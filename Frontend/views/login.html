@@ -1,0 +1,31 @@
+<div>
+    <div class="jumbotron welcome">
+        <h1 class="display-3 bg-primary" id="welcometext">CONNECT WITH CHRIST</h1>
+        <br>
+        <h4 class="display-3">
+            <p class="text-success">Please sign in below</p>
+        </h4>
+    </div>
+
+    <form name="form" ng-submit="vm.login()" role="form">
+        <div class="form-group loginblock" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash"
+                ng-bind="flash.message"></div>
+            <div id="emaillabel">
+                <label for="email">Email: </label>
+                <input type="text" placeholder="username@email.com" name="email" id="email" ng-model="vm.email" required />
+            </div>
+            <br>
+            <div id="passwordlabel">
+                <label for="password">Password: </label>
+                <input type="password" placeholder="Enter password here" name="password" id="password" ng-model="vm.password" required />
+            </div>
+
+            <br><br>
+            <div class="text-center">
+                <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-success btn-lg" id="loginsignupbuttons">Login</button>
+                <!--<a href="#"><button type="button" class='btn btn-primary' id="loginsignupbuttons">Sign Up</button></a>-->
+            </div>
+        </div>
+    </form>
+</div>

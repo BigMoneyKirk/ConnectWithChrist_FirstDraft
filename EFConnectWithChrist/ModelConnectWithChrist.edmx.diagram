@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="43ff2fb4d2ce4ca59ef2b6165892a384" Name="Diagram1">
+      <Diagram DiagramId="15e318d43af64bc6a2acca76e57a1441" Name="Diagram1">
         <EntityTypeShape EntityType="ConnectWithChristModel.MainBusiness" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConnectWithChristModel.sysdiagram" Width="1.5" PointX="5.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConnectWithChristModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ConnectWithChristModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConnectWithChristModel.UserType" Width="1.5" PointX="3.125" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConnectWithChristModel.UserType" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="ConnectWithChristModel.FK__User__mainBusine__4F7CD00D" ManuallyRouted="false" />
         <AssociationConnector Association="ConnectWithChristModel.FK__User__UserType__5070F446" ManuallyRouted="false" />
       </Diagram>

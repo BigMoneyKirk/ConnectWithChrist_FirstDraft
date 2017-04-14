@@ -1,0 +1,72 @@
+<html >
+    <head>
+        <title>
+            Connect With Christ
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel='stylesheet'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="styles/styles.css" rel='stylesheet'>
+        <link href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" rel="stylesheet">
+    </head>
+
+    <body ng-app="ConnectWithChrist.Frontend">
+
+      	<nav class="navbar navbar-inverse" role="navigation" ng-controller="collapseCtrl" ng-hide="inExam() == true">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+            <ul class="nav navbar-nav">
+              <!--TODO: Nav bar needs to be pruned; was designed this way for easier navigation while developing.-->
+              <li><a ui-sref="home">Home</a></li>
+              <li><a ui-sref="profile">Profile</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a ui-sref="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a ui-sref="/examsettings">Edit Profile</a></li>
+                  <li><a ui-sref="/about">About</a></li>
+                  <li class="divider"></li>
+                  <li><a ui-sref="#">Separated link</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a ui-sref="login" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+              </li>
+            </ul>
+		      </div>
+	      </nav>
+      
+     <!--Where the partial views take place-->
+    <div ui-view ></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/otherjs.js"></script>
+    <script src="js/timerWorker.js"></script>
+    <script src="services/services.js"></script>
+    <script src="services/factory.js"></script>
+    <script src="ctrl/injects.js"></script>
+    <script src="ctrl/ctrls.js"></script>
+    
+  </body>
+</html>

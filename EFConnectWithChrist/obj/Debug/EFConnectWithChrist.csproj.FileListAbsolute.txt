@@ -1,0 +1,10 @@
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EFConnectWithChrist.dll.config
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EFConnectWithChrist.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EFConnectWithChrist.pdb
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EntityFramework.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EntityFramework.xml
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.pdb
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.csprojResolveAssemblyReference.cache
