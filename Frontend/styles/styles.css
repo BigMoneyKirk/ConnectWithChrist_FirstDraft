@@ -1,0 +1,129 @@
+.welcomeuser{
+    text-align: center;
+    font-size: 30px;
+}
+
+.navtext{
+    color: orange;
+}
+
+.userType{
+    text-align: center;
+    font-size: 18px;
+}
+
+.examsettingstitle{
+    text-align: center;
+    font-size: 30px;
+}
+
+.examname{
+    text-align: center;
+    font-size: 20px;
+}
+
+#examinformation{
+    /*text-align: center;*/
+    font-size: 20px;    
+}
+
+#startButtons{
+    text-align: center;
+}
+
+#assocaitestanding{
+    border-style: solid;
+    border-color: darkorange;
+    border-width: 5px;
+    background-color: lightgray;
+    /*margin-left: 10px;*/
+}
+
+#associatestandinglabel{
+    text-align: center;
+    font-size: 30px;
+}
+
+#associatestatus{
+    font-size: 22px;
+}
+
+#assocaitedetails{
+    /*border-style: solid;*/
+}
+
+#questionslabel{
+    font-size: 16px;
+}
+
+.btn-sq-xs {
+  width: 25px !important;
+  height: 25px !important;
+  padding:2px;
+}
+
+.questiondescription{
+    font-size: 24px;
+}
+
+#weekslabel{
+    text-align: center;
+    font-size: 24px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#loginsignupbuttons{
+    text-align: center;
+}
+
+#emaillabel{
+    text-align: center;
+}
+
+#passwordlabel{
+    text-align: center;
+    margin-right: 25px;
+}
+
+#emailandpasswordinputs{
+    text-align: left;
+}
+
+.display-3{
+     text-align: center;
+ }
+
+ #welcometext{
+     color: lightskyblue;
+     -webkit-text-stroke-width: 0.5px;
+     -webkit-text-stroke-color: orange;
+ }
+
+ #timerinnavbar{
+     color: yellow;
+     margin-right: 30px;
+     margin-top: 15px;
+ }
+
+ #listofexams{
+     text-align: center;
+ }
+
+ .test{
+    width:40%;
+ }

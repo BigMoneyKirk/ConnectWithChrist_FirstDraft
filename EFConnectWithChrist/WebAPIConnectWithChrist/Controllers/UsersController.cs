@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,14 +9,34 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using WebAPIConnectWithChrist.App_Start;
 using WebAPIConnectWithChrist.Models;
 
 namespace WebAPIConnectWithChrist.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
         private WebAPIConnectWithChristContext db = new WebAPIConnectWithChristContext();
+
+        [HttpGet]
+        [ActionName("GetAllUsers")]
+        public HttpResponseMessage GetAllUsers()
+        {
+            try
+            {
+                NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"All the users are retrieved."));
+                List<User> listUser = db.Users.ToList();
+                return Request.CreateResponse(HttpStatusCode.OK, listUser);
+            }
+            catch(Exception ex)
+            {
+                NLogConfig.logger.Error(ex, $"There is no ID inputted");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
 
         // GET: api/Users
         public IQueryable<User> GetUsers()
