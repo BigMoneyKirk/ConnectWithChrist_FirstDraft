@@ -8,6 +8,27 @@ namespace WebAPIConnectWithChrist.Models
 {
     public class User
     {
+        public User() { }
+
+        public string firstname;
+        public string lastname;
+        public string email;
+        public string password;
+        public string phonenumber;
+        public int mainbusinessid;
+        public int usertypeid;
+
+        public User(string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, int usertypeid)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.email = email;
+            this.password = password;
+            this.phonenumber = phonenumber;
+            this.mainbusinessid = mainbusinessid;
+            this.usertypeid = usertypeid;
+        }
+
         [Key]
         public int UserID { get; set; }
         public string Firstname { get; set; }

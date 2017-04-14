@@ -88,3 +88,111 @@
 
 
  
+ ----------------------- Info (2017-04-14 11:21:59.2664) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 11:51:32.0536) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 13:22:09.1521) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 13:23:31.9761) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 13:33:48.4443) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 13:34:16.6214) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 13:34:23.4505) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-14 13:56:03.9944) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.InvalidOperationException
+ Exception Message: No connection string named 'ConnectWithChristEntities' could be found in the application config file.
+ Stack Trace:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 32
+ Additional Info: There is no ID inputted
+
+
+ 
+ ----------------------- Info (2017-04-14 13:59:27.0864) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-14 14:00:34.2152) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: All the users are retrieved.
+
+
+ 

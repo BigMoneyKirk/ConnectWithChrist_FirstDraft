@@ -12,14 +12,16 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebAPIConnectWithChrist.App_Start;
-using WebAPIConnectWithChrist.Models;
+using MOD = WebAPIConnectWithChrist.Models;
+using EFConnectWithChrist;
 
 namespace WebAPIConnectWithChrist.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
-        private WebAPIConnectWithChristContext db = new WebAPIConnectWithChristContext();
+        //private MOD.WebAPIConnectWithChristContext db = new MOD.WebAPIConnectWithChristContext();
+        private ConnectWithChristEntities db = new ConnectWithChristEntities();
 
         [HttpGet]
         [ActionName("GetAllUsers")]
@@ -27,9 +29,14 @@ namespace WebAPIConnectWithChrist.Controllers
         {
             try
             {
+                var temp = db.Users.ToList();
+                List<MOD.User> userList = new List<MOD.User>();
+                foreach (var item in temp)
+                {
+                    userList.Add(ConvertEntityToModel.convertUser(item));
+                }
                 NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"All the users are retrieved."));
-                List<User> listUser = db.Users.ToList();
-                return Request.CreateResponse(HttpStatusCode.OK, listUser);
+                return Request.CreateResponse(HttpStatusCode.OK, userList);
             }
             catch(Exception ex)
             {
