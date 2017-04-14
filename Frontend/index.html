@@ -10,7 +10,7 @@
         <link href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" rel="stylesheet">
     </head>
 
-    <body ng-app="USL1701.Frontend">
+    <body ng-app="ConnectWithChrist.Frontend">
 
       	<nav class="navbar navbar-inverse" role="navigation" ng-controller="collapseCtrl" ng-hide="inExam() == true">
           <div class="navbar-header">
@@ -24,10 +24,7 @@
           <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
             <ul class="nav navbar-nav">
               <!--TODO: Nav bar needs to be pruned; was designed this way for easier navigation while developing.-->
-              <li><a ui-sref="/">Associate Welcome</a></li>
-              <li><a ui-sref="examsettings">Exam Settings</a></li>
-              <li><a ui-sref="settings">Create Settings</a></li>
-              <li><a ui-sref="trainerwelcome">Trainer Welcome</a></li>
+              <li><a ui-sref="/">Home</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -61,11 +58,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
-    <script src="app.js"></script>
-    <script src="otherjs.js"></script>
-    <script src="timerWorker.js"></script>
-    <script src="services.js"></script>
-    <script src="factory.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/otherjs.js"></script>
+    <script src="js/timerWorker.js"></script>
+    <script src="services/services.js"></script>
+    <script src="services/factory.js"></script>
+    <script src="ctrl/injects.js"></script>
     <script src="ctrl/ctrls.js"></script>
     
   </body>

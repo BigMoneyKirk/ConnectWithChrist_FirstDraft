@@ -1,4 +1,4 @@
-var app = angular.module('USL1701.Frontend', ['ui.router', 'ngSanitize', 'ui.bootstrap', 'ngAnimate', 'ngMaterial', 'ngMessages']);
+var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize', 'ui.bootstrap', 'ngAnimate', 'ngMaterial', 'ngMessages']);
 
 (function () {
     'use strict';
