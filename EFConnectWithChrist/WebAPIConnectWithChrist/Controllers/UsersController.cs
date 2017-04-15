@@ -33,7 +33,7 @@ namespace WebAPIConnectWithChrist.Controllers
                 List<MOD.User> userList = new List<MOD.User>();
                 foreach(User usr in temp)
                 {
-                    NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"User {usr.Firstname} {usr.Lastname} was retrieved."));
+                    NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"User {usr.Firstname} {usr.Lastname} was retrieved."));
                     userList.Add(AutoMapper.Mapper.Map<MOD.User>(usr));
                 }
                 return Request.CreateResponse(HttpStatusCode.OK, userList);
@@ -52,21 +52,23 @@ namespace WebAPIConnectWithChrist.Controllers
 
         [HttpGet]
         [ActionName("GetUserByEmail")]
+        [Route("api/Users/GetUserByEmail")]
+        [ResponseType(typeof(User))]
         public HttpResponseMessage GetUserByEmail(string email)
         {
             try
             {
+                MOD.User yes = new MOD.User();
                 var temp = db.Users.ToList();
-                MOD.User user = new MOD.User();
-                //foreach (var item in temp)
-                //{
-                //    if (item.email == email)
-                //    {
-                //        user = ConvertEntityToModel.convertUser(item);
-                //        NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"{item.Firstname} {item.Lastname} is the user you are looking for."));
-                //    }
-                //}
-                return Request.CreateResponse(HttpStatusCode.OK, user);
+                foreach(User usr in temp)
+                {
+                    if(usr.email == email)
+                    {
+                        yes = AutoMapper.Mapper.Map<MOD.User>(usr);
+                    }
+                }
+                NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"{yes.Firstname} {yes.Lastname} has the email of {yes.email}"));
+                return Request.CreateResponse(HttpStatusCode.OK, yes);
             }
             catch (Exception ex)
             {

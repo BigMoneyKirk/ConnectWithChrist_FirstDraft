@@ -304,3 +304,13 @@
 
 
  
+ ----------------------- Info (2017-04-15 17:33:13.5715) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
