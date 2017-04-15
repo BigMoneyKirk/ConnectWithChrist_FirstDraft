@@ -8,32 +8,33 @@ namespace WebAPIConnectWithChrist.Models
 {
     public class User
     {
-        public User() { }
+        //public User() { }
 
-        public User(int userID, string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, DateTime dayAndTimeJoined, int usertypeid)
-        {
-            UserID = userID;
-            Firstname = firstname;
-            Lastname = lastname;
-            Email = email;
-            Password = password;
-            PhoneNumber = phonenumber;
-            MainBusinessID = mainbusinessid;
-            DayAndTimeJoined = dayAndTimeJoined;
-            UserTypeID = usertypeid;
-        }
+        //public User(int userID, string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, DateTime dayAndTimeJoined, int usertypeid)
+        //{
+        //    UserID = userID;
+        //    Firstname = firstname;
+        //    Lastname = lastname;
+        //    this.email = email;
+        //    this.password = password;
+        //    phoneNumber = phonenumber;
+        //    MainBusinessID = mainbusinessid;
+        //    DayAndTimeJoined = dayAndTimeJoined;
+        //    UserTypeID = usertypeid;
+        //}
 
         [Key]
         public int UserID { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string PhoneNumber { get; set; }
-        public int MainBusinessID { get; set; }
-        public string MainBusiness { get; set; }
-        public DateTime DayAndTimeJoined { get; set; }
-        public int UserTypeID { get; set; }
-        public string UserType { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string phoneNumber { get; set; }
+        public int mainBusinessID { get; set; }
+        public System.DateTime dayAndTimeJoined { get; set; }
+        public int UserType { get; set; }
+
+        public virtual MainBusiness MainBusiness { get; set; }
+        public virtual UserType UserType1 { get; set; }
     }
 }

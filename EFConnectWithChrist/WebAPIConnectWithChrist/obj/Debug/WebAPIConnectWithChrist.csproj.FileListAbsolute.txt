@@ -64,3 +64,5 @@ C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPICon
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\obj\Debug\WebAPIConnectWithChrist.csprojResolveAssemblyReference.cache
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\bin\EFConnectWithChrist.dll
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\bin\EFConnectWithChrist.pdb
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\bin\AutoMapper.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\bin\AutoMapper.xml

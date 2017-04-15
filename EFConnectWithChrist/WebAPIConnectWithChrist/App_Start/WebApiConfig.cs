@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Routing;
 
 namespace WebAPIConnectWithChrist
 {
@@ -28,6 +29,17 @@ namespace WebAPIConnectWithChrist
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
+            );
+        }
+
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.Ignore("{resource}.axd/{*pathinfo*}");
+
+            routes.MapHttpRoute(
+             name: "API Default",
+              routeTemplate: "api/{controller}/{action}/{id}",
+              defaults: new { id = RouteParameter.Optional }
             );
         }
     }

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 using System.Web.Mvc;
+using WebAPIConnectWithChrist.App_Start;
 
 namespace WebAPIConnectWithChrist
 {
@@ -16,6 +17,8 @@ namespace WebAPIConnectWithChrist
             GlobalConfiguration.Configure(WebApiConfig.Register);
             var rhm = new RequestHeaderMapping("Accept", "text/html",
                 StringComparison.InvariantCultureIgnoreCase, true, "application/json");
+            AutoMapperConfig.Configure();
+            WebApiConfig.RegisterRoutes(RouteTable.Routes);
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(rhm);
         }

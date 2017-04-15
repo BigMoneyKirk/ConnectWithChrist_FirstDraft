@@ -1,7 +1,6 @@
 ﻿using NLog;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -20,27 +19,33 @@ namespace WebAPIConnectWithChrist.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
-        //private MOD.WebAPIConnectWithChristContext db = new MOD.WebAPIConnectWithChristContext();
         private ConnectWithChristEntities db = new ConnectWithChristEntities();
 
         [HttpGet]
         [ActionName("GetAllUsers")]
+        [Route("api/Users/GetAllUsers")]
+        [ResponseType(typeof(User))]
         public HttpResponseMessage GetAllUsers()
         {
             try
             {
                 var temp = db.Users.ToList();
                 List<MOD.User> userList = new List<MOD.User>();
-                foreach (var item in temp)
+                foreach(User usr in temp)
                 {
-                    userList.Add(ConvertEntityToModel.convertUser(item));
+                    NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"User {usr.Firstname} {usr.Lastname} was retrieved."));
+                    userList.Add(AutoMapper.Mapper.Map<MOD.User>(usr));
                 }
-                NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"All the users are retrieved."));
                 return Request.CreateResponse(HttpStatusCode.OK, userList);
+            }
+            catch(InvalidOperationException ex)
+            {
+                NLogConfig.logger.Error(ex, $"For some reason, the mapper is not be initialized.");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
             catch(Exception ex)
             {
-                NLogConfig.logger.Error(ex, $"There is no ID inputted");
+                NLogConfig.logger.Error(ex, $"There is an error with the api routing.");
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
@@ -53,14 +58,14 @@ namespace WebAPIConnectWithChrist.Controllers
             {
                 var temp = db.Users.ToList();
                 MOD.User user = new MOD.User();
-                foreach (var item in temp)
-                {
-                    if (item.email == email)
-                    {
-                        user = ConvertEntityToModel.convertUser(item);
-                        NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"{item.Firstname} {item.Lastname} is the user you are looking for."));
-                    }
-                }
+                //foreach (var item in temp)
+                //{
+                //    if (item.email == email)
+                //    {
+                //        user = ConvertEntityToModel.convertUser(item);
+                //        NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UserController", $"{item.Firstname} {item.Lastname} is the user you are looking for."));
+                //    }
+                //}
                 return Request.CreateResponse(HttpStatusCode.OK, user);
             }
             catch (Exception ex)

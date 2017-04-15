@@ -7,4 +7,5 @@ C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.dll
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.pdb
-C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.csprojResolveAssemblyReference.cache
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\AutoMapper.dll
+C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\AutoMapper.xml

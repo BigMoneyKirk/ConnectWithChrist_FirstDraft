@@ -206,3 +206,101 @@
 
 
  
+ ----------------------- Info (2017-04-15 11:14:38.9822) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-15 11:14:39.0498) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.InvalidOperationException
+ Exception Message: Mapper not initialized. Call Initialize with appropriate configuration. If you are trying to use mapper instances through a container or otherwise, make sure you do not have any calls to the static Mapper.Map methods, and if you're using ProjectTo or UseAsDataSource extension methods, make sure you pass in the appropriate IConfigurationProvider instance.
+ Stack Trace:    at AutoMapper.Mapper.get_Instance()
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 53
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-04-15 11:17:46.7149) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-15 11:18:26.2528) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.InvalidOperationException
+ Exception Message: Mapper not initialized. Call Initialize with appropriate configuration. If you are trying to use mapper instances through a container or otherwise, make sure you do not have any calls to the static Mapper.Map methods, and if you're using ProjectTo or UseAsDataSource extension methods, make sure you pass in the appropriate IConfigurationProvider instance.
+ Stack Trace:    at AutoMapper.Mapper.get_Instance()
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 53
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-04-15 11:45:29.4116) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-15 11:45:29.4842) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.InvalidOperationException
+ Exception Message: Mapper not initialized. Call Initialize with appropriate configuration. If you are trying to use mapper instances through a container or otherwise, make sure you do not have any calls to the static Mapper.Map methods, and if you're using ProjectTo or UseAsDataSource extension methods, make sure you pass in the appropriate IConfigurationProvider instance.
+ Stack Trace:    at AutoMapper.Mapper.get_Instance()
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 52
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-04-15 16:30:39.9484) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-15 16:30:40.0046) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.InvalidOperationException
+ Exception Message: Mapper not initialized. Call Initialize with appropriate configuration. If you are trying to use mapper instances through a container or otherwise, make sure you do not have any calls to the static Mapper.Map methods, and if you're using ProjectTo or UseAsDataSource extension methods, make sure you pass in the appropriate IConfigurationProvider instance.
+ Stack Trace:    at AutoMapper.Mapper.get_Instance()
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 54
+ Additional Info: For some reason, the mapper is not be initialized.
+
+
+ 
+ ----------------------- Info (2017-04-15 16:33:23.0717) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
