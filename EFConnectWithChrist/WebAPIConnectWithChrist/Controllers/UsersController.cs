@@ -77,6 +77,24 @@ namespace WebAPIConnectWithChrist.Controllers
             }
         }
 
+        [HttpPost]
+        [ActionName("RegisterNewUser")]
+        [Route("api/Users/RegisterNewUser")]
+        [ResponseType(typeof(User))]
+        public HttpResponseMessage RegisterNewUser(MOD.User usr)
+        {
+            if (!ModelState.IsValid)
+            {
+                NLogConfig.logger.Error($"This model state is not valid");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, $"This model state is not valid");
+            }
+
+            User dbuser = AutoMapper.Mapper.Map<User>(usr);
+            db.Users.Add(dbuser);
+            NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"{usr.Firstname} {usr.Lastname} was added to the database."));
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
         // GET: api/Users/5
         [ResponseType(typeof(User))]
         public async Task<IHttpActionResult> GetUser(int id)

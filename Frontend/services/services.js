@@ -196,28 +196,17 @@ app.service("APIService", function ($http) {
     };
 });
 
-app.service("UserData", function () {
-    var User = {
-        status: '',
-        batchName: '',
-        batchTrainer: '',
-        userName: '',
-        userType: ''
-    };
-    return User;
-});
-
-
 (function () {
     'use strict';
 
     app.service('AuthenticationService', AuthenticationService);
 
-    AuthenticationService.$inject = ['$http', '$rootScope', '$timeout', 'UserService'];
-    function AuthenticationService($http, $rootScope, $timeout, UserService) {
+    AuthenticationService.$inject = ['$http', '$rootScope', '$timeout', 'UserFactory'];
+    function AuthenticationService($http, $rootScope, $timeout, UserFactory) {
         var service = {};
 
         service.Login = Login;
+        service.SignUp = SignUp;
         service.SetCredentials = SetCredentials;
         service.ClearCredentials = ClearCredentials;
 
@@ -229,10 +218,10 @@ app.service("UserData", function () {
              ----------------------------------------------*/
             $timeout(function () {
                 var response;
-                UserService.GetByEmail(email)
+                UserFactory.GetByEmail(email)
                     .then(function (user) {
-                        if (user !== null && user.Password === password) {
-                            response = { success: true, userType: user.UserType };
+                        if (user !== null && user.password === password) {
+                            response = { success: true, userType: user.UserType1.UserTypeName };
                         } else {
                             response = { success: false, message: 'Email or password is incorrect. Please try again.' };
                         }
@@ -248,6 +237,27 @@ app.service("UserData", function () {
             //    });
 
         }
+
+        function SignUp(firstname, lastname, email, password, phonenumber, dateandtime, passion){
+            UserFactory.RegisterNewUser(user1)
+                .then(function(user){
+                    if(user !== null){
+                        response = {success: true};
+                    }
+                    else{
+                        response = {success: false, message: 'I need more.'}
+                    }
+                })
+        }
+
+        var SaveSettings = function (settingsData, successCallback, errorCallback) {
+        $http.post((domain + "StoreSettings"), settingsData)
+            .then(function (data) {
+                successCallback(data);
+            }, function (err) {
+                errorCallback(err);
+            });
+    };
 
         function SetCredentials(email, password) {
             var authdata = Base64.encode(email + ':' + password);

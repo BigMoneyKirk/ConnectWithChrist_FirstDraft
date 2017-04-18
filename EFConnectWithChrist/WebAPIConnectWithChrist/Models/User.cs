@@ -8,21 +8,6 @@ namespace WebAPIConnectWithChrist.Models
 {
     public class User
     {
-        //public User() { }
-
-        //public User(int userID, string firstname, string lastname, string email, string password, string phonenumber, int mainbusinessid, DateTime dayAndTimeJoined, int usertypeid)
-        //{
-        //    UserID = userID;
-        //    Firstname = firstname;
-        //    Lastname = lastname;
-        //    this.email = email;
-        //    this.password = password;
-        //    phoneNumber = phonenumber;
-        //    MainBusinessID = mainbusinessid;
-        //    DayAndTimeJoined = dayAndTimeJoined;
-        //    UserTypeID = usertypeid;
-        //}
-
         [Key]
         public int UserID { get; set; }
         public string Firstname { get; set; }
@@ -33,7 +18,6 @@ namespace WebAPIConnectWithChrist.Models
         public int mainBusinessID { get; set; }
         public System.DateTime dayAndTimeJoined { get; set; }
         public int UserType { get; set; }
-
         public virtual MainBusiness MainBusiness { get; set; }
         public virtual UserType UserType1 { get; set; }
     }

@@ -24,10 +24,10 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
             /* from the list of exams from associateHome, this state presents the
              * settings for that exam
              */
-            .state('examsettings', {
-                url: '/examsettings',
-                templateUrl: 'views/associateview_examsettings.html',
-                controller: "associateExamSettingsCtrl"
+            .state('profile', {
+                url: '/profile',
+                templateUrl: 'views/profile.html',
+                controller: "profileCtrl"
             })
             // settings for a trainer to create rules for a particular exam template
             .state('settings', {
