@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace WebAPIConnectWithChrist.Models
 {
-    public class MainBusiness
+    public class Passion
     {
-        [Key]
-        public int mainBusinessID { get; set; }
-        public string BusinessName { get; set; }
+        public int passionID { get; set; }
+        public string PassionName { get; set; }
         public decimal grossIncome { get; set; }
     }
 }

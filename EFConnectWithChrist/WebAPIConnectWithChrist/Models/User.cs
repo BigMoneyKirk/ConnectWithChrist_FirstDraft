@@ -15,10 +15,11 @@ namespace WebAPIConnectWithChrist.Models
         public string email { get; set; }
         public string password { get; set; }
         public string phoneNumber { get; set; }
-        public int mainBusinessID { get; set; }
+        public Nullable<int> passionID { get; set; }
         public System.DateTime dayAndTimeJoined { get; set; }
-        public int UserType { get; set; }
-        public virtual MainBusiness MainBusiness { get; set; }
-        public virtual UserType UserType1 { get; set; }
+        public int UserTypeID { get; set; }
+
+        public virtual Passion Passion { get; set; }
+        public virtual UserType UserType { get; set; }
     }
 }

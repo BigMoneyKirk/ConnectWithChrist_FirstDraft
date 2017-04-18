@@ -11,11 +11,11 @@ namespace WebAPIConnectWithChrist.App_Start
             {
                 cfg.CreateMap<EF.User, Models.User>();
                 cfg.CreateMap<EF.UserType, Models.UserType>();
-                cfg.CreateMap<EF.MainBusiness, Models.MainBusiness>();
+                cfg.CreateMap<EF.Passion, Models.Passion>();
 
                 cfg.CreateMap<Models.User, EF.User>();
                 cfg.CreateMap<Models.UserType, EF.UserType>();
-                cfg.CreateMap<Models.MainBusiness, EF.MainBusiness>();
+                cfg.CreateMap<Models.Passion, EF.Passion>();
             });
         }
     }

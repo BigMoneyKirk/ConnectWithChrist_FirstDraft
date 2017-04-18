@@ -5,12 +5,12 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="ConnectWithChristModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="MainBusiness">
+        <EntityType Name="Passion">
           <Key>
-            <PropertyRef Name="mainBusinessID" />
+            <PropertyRef Name="passionID" />
           </Key>
-          <Property Name="mainBusinessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BusinessName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PassionName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="grossIncome" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -33,9 +33,9 @@
           <Property Name="email" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="phoneNumber" Type="varchar" MaxLength="15" />
-          <Property Name="mainBusinessID" Type="int" Nullable="false" />
+          <Property Name="passionID" Type="int" />
           <Property Name="dayAndTimeJoined" Type="datetime" Nullable="false" />
-          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="UserType">
           <Key>
@@ -44,19 +44,19 @@
           <Property Name="UserTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserTypeName" Type="varchar" MaxLength="40" />
         </EntityType>
-        <Association Name="FK__User__mainBusine__4F7CD00D">
-          <End Role="MainBusiness" Type="Self.MainBusiness" Multiplicity="1" />
+        <Association Name="FK__User__passionID__59063A47">
+          <End Role="Passion" Type="Self.Passion" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MainBusiness">
-              <PropertyRef Name="mainBusinessID" />
+            <Principal Role="Passion">
+              <PropertyRef Name="passionID" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="mainBusinessID" />
+              <PropertyRef Name="passionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__User__UserType__5070F446">
+        <Association Name="FK__User__UserTypeID__5812160E">
           <End Role="UserType" Type="Self.UserType" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -64,7 +64,7 @@
               <PropertyRef Name="UserTypeID" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="UserType" />
+              <PropertyRef Name="UserTypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -100,15 +100,15 @@
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ConnectWithChristModelStoreContainer">
-          <EntitySet Name="MainBusiness" EntityType="Self.MainBusiness" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Passion" EntityType="Self.Passion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__User__mainBusine__4F7CD00D" Association="Self.FK__User__mainBusine__4F7CD00D">
-            <End Role="MainBusiness" EntitySet="MainBusiness" />
+          <AssociationSet Name="FK__User__passionID__59063A47" Association="Self.FK__User__passionID__59063A47">
+            <End Role="Passion" EntitySet="Passion" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK__User__UserType__5070F446" Association="Self.FK__User__UserType__5070F446">
+          <AssociationSet Name="FK__User__UserTypeID__5812160E" Association="Self.FK__User__UserTypeID__5812160E">
             <End Role="UserType" EntitySet="UserType" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
@@ -118,14 +118,14 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConnectWithChristModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="MainBusiness">
+        <EntityType Name="Passion">
           <Key>
-            <PropertyRef Name="mainBusinessID" />
+            <PropertyRef Name="passionID" />
           </Key>
-          <Property Name="mainBusinessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BusinessName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PassionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="grossIncome" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK__User__mainBusine__4F7CD00D" FromRole="MainBusiness" ToRole="User" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__User__passionID__59063A47" FromRole="Passion" ToRole="User" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -147,11 +147,11 @@
           <Property Name="email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="phoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="mainBusinessID" Type="Int32" Nullable="false" />
+          <Property Name="passionID" Type="Int32" />
           <Property Name="dayAndTimeJoined" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UserType" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="MainBusiness" Relationship="Self.FK__User__mainBusine__4F7CD00D" FromRole="User" ToRole="MainBusiness" />
-          <NavigationProperty Name="UserType1" Relationship="Self.FK__User__UserType__5070F446" FromRole="User" ToRole="UserType" />
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Passion" Relationship="Self.FK__User__passionID__59063A47" FromRole="User" ToRole="Passion" />
+          <NavigationProperty Name="UserType" Relationship="Self.FK__User__UserTypeID__5812160E" FromRole="User" ToRole="UserType" />
         </EntityType>
         <EntityType Name="UserType">
           <Key>
@@ -159,21 +159,21 @@
           </Key>
           <Property Name="UserTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserTypeName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK__User__UserType__5070F446" FromRole="UserType" ToRole="User" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__User__UserTypeID__5812160E" FromRole="UserType" ToRole="User" />
         </EntityType>
-        <Association Name="FK__User__mainBusine__4F7CD00D">
-          <End Role="MainBusiness" Type="Self.MainBusiness" Multiplicity="1" />
+        <Association Name="FK__User__passionID__59063A47">
+          <End Role="Passion" Type="Self.Passion" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MainBusiness">
-              <PropertyRef Name="mainBusinessID" />
+            <Principal Role="Passion">
+              <PropertyRef Name="passionID" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="mainBusinessID" />
+              <PropertyRef Name="passionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__User__UserType__5070F446">
+        <Association Name="FK__User__UserTypeID__5812160E">
           <End Role="UserType" Type="Self.UserType" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -181,20 +181,20 @@
               <PropertyRef Name="UserTypeID" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="UserType" />
+              <PropertyRef Name="UserTypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ConnectWithChristEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="MainBusinesses" EntityType="Self.MainBusiness" />
+          <EntitySet Name="Passions" EntityType="Self.Passion" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="UserTypes" EntityType="Self.UserType" />
-          <AssociationSet Name="FK__User__mainBusine__4F7CD00D" Association="Self.FK__User__mainBusine__4F7CD00D">
-            <End Role="MainBusiness" EntitySet="MainBusinesses" />
+          <AssociationSet Name="FK__User__passionID__59063A47" Association="Self.FK__User__passionID__59063A47">
+            <End Role="Passion" EntitySet="Passions" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="FK__User__UserType__5070F446" Association="Self.FK__User__UserType__5070F446">
+          <AssociationSet Name="FK__User__UserTypeID__5812160E" Association="Self.FK__User__UserTypeID__5812160E">
             <End Role="UserType" EntitySet="UserTypes" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
@@ -246,11 +246,11 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ConnectWithChristModelStoreContainer" CdmEntityContainer="ConnectWithChristEntities">
-          <EntitySetMapping Name="MainBusinesses">
-            <EntityTypeMapping TypeName="ConnectWithChristModel.MainBusiness">
-              <MappingFragment StoreEntitySet="MainBusiness">
-                <ScalarProperty Name="mainBusinessID" ColumnName="mainBusinessID" />
-                <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <EntitySetMapping Name="Passions">
+            <EntityTypeMapping TypeName="ConnectWithChristModel.Passion">
+              <MappingFragment StoreEntitySet="Passion">
+                <ScalarProperty Name="passionID" ColumnName="passionID" />
+                <ScalarProperty Name="PassionName" ColumnName="PassionName" />
                 <ScalarProperty Name="grossIncome" ColumnName="grossIncome" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -275,9 +275,9 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
-                <ScalarProperty Name="mainBusinessID" ColumnName="mainBusinessID" />
+                <ScalarProperty Name="passionID" ColumnName="passionID" />
                 <ScalarProperty Name="dayAndTimeJoined" ColumnName="dayAndTimeJoined" />
-                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -12,19 +12,14 @@ namespace EFConnectWithChrist
     using System;
     using System.Collections.Generic;
     
-    public partial class MainBusiness
+    public partial class Passion
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MainBusiness()
-        {
-            this.Users = new HashSet<User>();
-        }
-    
-        public int mainBusinessID { get; set; }
-        public string BusinessName { get; set; }
+   
+        public int passionID { get; set; }
+        public string PassionName { get; set; }
         public decimal grossIncome { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
     }
 }

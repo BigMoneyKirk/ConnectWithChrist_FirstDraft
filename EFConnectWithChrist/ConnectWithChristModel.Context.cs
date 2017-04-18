@@ -27,7 +27,7 @@ namespace EFConnectWithChrist
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<MainBusiness> MainBusinesses { get; set; }
+        public virtual DbSet<Passion> Passions { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }

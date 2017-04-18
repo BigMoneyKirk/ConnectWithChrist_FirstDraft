@@ -454,3 +454,74 @@
 
 
  
+ ----------------------- Error (2017-04-18 13:43:14.2453) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+ Exception Message: An error occurred while executing the command definition. See the inner exception for details.
+ Stack Trace:    at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 32
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-04-18 13:55:53.1034) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-18 13:58:29.1393) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-18 14:06:17.5893) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-18 14:08:44.5855) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-18 14:10:05.8629) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 

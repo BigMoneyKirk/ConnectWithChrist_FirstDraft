@@ -21,7 +21,7 @@ namespace WebAPIConnectWithChrist.Models
 
         public System.Data.Entity.DbSet<WebAPIConnectWithChrist.Models.User> Users { get; set; }
 
-        public System.Data.Entity.DbSet<WebAPIConnectWithChrist.Models.MainBusiness> MainBusinesses { get; set; }
+        public System.Data.Entity.DbSet<WebAPIConnectWithChrist.Models.Passion> Passions { get; set; }
 
         public System.Data.Entity.DbSet<WebAPIConnectWithChrist.Models.UserType> UserTypes { get; set; }
     }

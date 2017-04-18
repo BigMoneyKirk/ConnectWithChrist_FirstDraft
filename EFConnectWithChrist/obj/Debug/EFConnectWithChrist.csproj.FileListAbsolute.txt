@@ -9,4 +9,3 @@ C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.pdb
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\AutoMapper.dll
 C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\bin\Debug\AutoMapper.xml
-C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\obj\Debug\EFConnectWithChrist.csprojResolveAssemblyReference.cache

@@ -29,11 +29,12 @@ namespace WebAPIConnectWithChrist.Controllers
         {
             try
             {
-                var temp = db.Users.ToList();
+                List<User> temp = db.Users.ToList();
                 List<MOD.User> userList = new List<MOD.User>();
                 foreach(User usr in temp)
                 {
                     NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"User {usr.Firstname} {usr.Lastname} was retrieved."));
+                    // my problem is here...It is the AutoMapper...
                     userList.Add(AutoMapper.Mapper.Map<MOD.User>(usr));
                 }
                 return Request.CreateResponse(HttpStatusCode.OK, userList);
