@@ -238,10 +238,10 @@ app.service("APIService", function ($http) {
 
         }
 
-        function SignUp(firstname, lastname, email, password, phonenumber, dateandtime, passion){
-            UserFactory.RegisterNewUser(user1)
-                .then(function(user){
-                    if(user !== null){
+        function SignUp(firstname, lastname, email, password, phonenumber, passion, usertype){
+            UserFactory.RegisterNewUser(user)
+                .then(function(user1){
+                    if(user1 !== null){
                         response = {success: true};
                     }
                     else{

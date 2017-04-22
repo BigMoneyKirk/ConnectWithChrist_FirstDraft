@@ -19,6 +19,5 @@ namespace EFConnectWithChrist
         public int UserTypeID { get; set; }
         public string UserTypeName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     }
 }

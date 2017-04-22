@@ -9,7 +9,7 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
 
         $stateProvider
             // first state that application begins on: the login
-            .state('/', {
+            .state('login', {
                 url: '/login',
                 templateUrl: 'views/login.html',
                 controller: 'loginCtrl',

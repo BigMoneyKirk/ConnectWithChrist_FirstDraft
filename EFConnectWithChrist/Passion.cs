@@ -20,6 +20,5 @@ namespace EFConnectWithChrist
         public string PassionName { get; set; }
         public decimal grossIncome { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     }
 }

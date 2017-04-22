@@ -46,35 +46,35 @@
                     <form name="form" ng-submit="vm.signup()" role="form">
                         <div class="group">
                             <label for="firstname" class="label">first name *</label>
-                            <input id="firstname" type="text" class="input" required />
+                            <input id="firstname" type="text" class="input" ng-model="vm.user.firstname" required />
                         </div>
                         <div class="group">
                             <label for="lastname" class="label">last name *</label>
-                            <input id="lastname" type="text" class="input" required />
+                            <input id="lastname" type="text" class="input" ng-model="vm.user.lastname" required />
                         </div>
                         <div class="group">
                             <label for="email" class="label">E-mail *</label>
-                            <input id="email" type="email" class="input" required />
+                            <input id="email" type="email" class="input" ng-model="vm.user.email" required />
                         </div>
                         <div class="group">
                             <label for="phonenumber" class="label">Phone Number (optional)</label>
-                            <input id="phonenumber" type="text" class="input" />
+                            <input id="phonenumber" type="text" class="input" ng-model="vm.user.phonenumber" />
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Password *</label>
-                            <input id="pass" type="password" class="input" data-type="password" required />
+                            <input id="pass" type="password" class="input" data-type="password" ng-model="vm.user.password" required />
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Repeat Password *</label>
-                            <input id="pass" type="password" class="input" data-type="password" required />
+                            <input id="pass" type="password" class="input" data-type="password" ng-model="vm.user.password" required />
                         </div>
                         <div class="group">
-                            <label for="mainbusiness" class="label">What's your passion? *</label>
-                            <input id="mainbusiness" type="text" class="input" required />
+                            <label for="passion" class="label">What's your passion? *</label>
+                            <input id="passion" type="text" class="input" ng-model="vm.user.passion" required />
                         </div>
                         <div class="group">
                             <label for="usertype" class="label">Are you a: *</label>
-                            <select class="form-control">
+                            <select class="form-control" ng-model="vm.user.usertype">
                                 <option value=1>Founder</option>
                                 <option value=2>Boss</option>
                                 <option value=3>Employee</option>

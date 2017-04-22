@@ -110,7 +110,7 @@ function UserFactory($http) {
     }
 
     function RegisterNewUser(user) {
-        return $htpp.post("http://localhost:57371/api/Users/RegisterNewUser/" + user);
+        return $http.post("http://localhost:57371/api/Users/RegisterNewUser/", user);
     }
 
     // private functions

@@ -40,28 +40,20 @@ function SignUpInject($location, AuthenticationService) {
 
     vm.signup = signup;
 
-    (function initController() {
-        // reset login status
-        AuthenticationService.ClearCredentials();
-    })();
-
     function signup() {
         vm.dataLoading = true;
-        AuthenticationService.Login(vm.firstname, vm. lastname, vm.email, vm.password, vm.phonenumber, vm.dateandtime, vm.passion, function (response) {
-            if (response.success) {
-                AuthenticationService.SetCredentials(vm.email, vm.password);
-                if (response.userType == 1) {
-                    $location.path('/associateHome');
+        AuthenticationService.SignUp(vm.user)
+            .then(function(response){
+                if(response.success){
+                    FlashFactory.Success('Thank you for being apart of the Connect With Christ Family!', true);
+                    $location.path('/login');
                 }
-                if (response.userType == 3) {
-                    $location.path('/trainerwelcome');
+                else{
+                    FlashFactory.Error(response.message);
+                    vm.dataLoading = false;
                 }
-            } else {
-                FlashFactory.Error(response.message);
-                vm.dataLoading = false;
-            }
-        });
-    };
+            });
+    }
 }
 
 /// Home Inject
