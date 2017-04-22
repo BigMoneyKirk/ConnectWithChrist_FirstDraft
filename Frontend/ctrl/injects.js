@@ -17,12 +17,7 @@ function LoginInject($location, AuthenticationService, FlashFactory) {
         AuthenticationService.Login(vm.email, vm.password, function (response) {
             if (response.success) {
                 AuthenticationService.SetCredentials(vm.email, vm.password);
-                if (response.userType == 1) {
-                    $location.path('/associateHome');
-                }
-                if (response.userType == 3) {
-                    $location.path('/trainerwelcome');
-                }
+                    $location.path('/home');
             } else {
                 FlashFactory.Error(response.message);
                 vm.dataLoading = false;

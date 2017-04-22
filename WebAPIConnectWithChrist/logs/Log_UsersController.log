@@ -525,3 +525,163 @@
 
 
  
+ ----------------------- Error (2017-04-22 17:38:55.2865) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Error (2017-04-22 17:39:05.2739) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Error (2017-04-22 17:39:10.4823) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Error (2017-04-22 17:39:19.9632) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Error (2017-04-22 17:40:17.6130) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
