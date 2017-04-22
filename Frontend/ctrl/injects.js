@@ -1,24 +1,23 @@
 /// Login Inject
-LoginInject.$inject = ['$location', 'AuthenticationService', 'FlashFactory'];
-function LoginInject($location, AuthenticationService, FlashFactory) {
+LoginInject.$inject = ['$location', '$state', 'AuthenticationService', 'FlashFactory'];
+function LoginInject($location, $state, AuthenticationService, FlashFactory) {
 
     // got this code from http://jasonwatmore.com/post/2015/03/10/angularjs-user-registration-and-login-example-tutorial#projectstructure
     var vm = this;
 
     vm.login = login;
 
-    (function initController() {
+    function login() {
         // reset login status
         AuthenticationService.ClearCredentials();
-    })();
 
-    function login() {
         vm.dataLoading = true;
         AuthenticationService.Login(vm.email, vm.password, function (response) {
             if (response.success) {
                 AuthenticationService.SetCredentials(vm.email, vm.password);
-                    $location.path('/home');
-            } else {
+                $state.go('profile');
+            }
+            else {
                 FlashFactory.Error(response.message);
                 vm.dataLoading = false;
             }
@@ -50,6 +49,30 @@ function SignUpInject($location, AuthenticationService) {
             });
     }
 }
+
+/// Profile Inject
+ProfileInject.$inject = ['UserFactory', 'AuthenticationService', '$rootScope', '$scope', '$location', '$state'];
+function ProfileInject(UserFactory, AuthenticationService, $rootScope, $scope, $location, $state){
+    //declaring the variables used in this inject/controller
+    $scope.user;
+    $scope.usertype;
+    $scope.userEmail;
+    
+    loadCurrentUser();
+
+    function loadCurrentUser() {
+        // doesn't work: if user isn't signed in, will reroute automatically to login screen
+        if ($rootScope.globals.currentUser == undefined) {
+            $location.path('/login');
+        }
+        UserFactory.GetByEmail($rootScope.globals.currentUser.email)
+            .then(function (user) {
+                $scope.user = user;
+                $scope.usertype = user.UserType.UserTypeName;
+                $scope.userEmail = user.email;
+            });
+    }
+};
 
 /// Home Inject
 HomeInject.$inject = ['UserFactory', 'AuthenticationService', 'getBatchInfoService', '$rootScope', '$scope', '$location', '$state', 'ExamData', 'ExamTemplateService'];
@@ -114,10 +137,4 @@ function CollapseInject($scope, $location) {
         $scope.isNavCollapsed = true;
         $scope.isCollapsed = false;
         $scope.isCollapsedHorizontal = false;
-};
-
-/// Profile Inject
-ProfileInject.$inject = ['$scope', '$location'];
-function ProfileInject($scope, $location){
-
 };

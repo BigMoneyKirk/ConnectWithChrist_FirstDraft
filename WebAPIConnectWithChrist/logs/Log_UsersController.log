@@ -685,3 +685,831 @@ The required property 'Users' does not exist on the type 'EFConnectWithChrist.Us
 
 
  
+ ----------------------- Error (2017-04-22 17:48:16.8183) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Error (2017-04-22 17:53:32.9618) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 32
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-04-22 17:59:18.4440) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Error (2017-04-22 18:01:22.2228) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 32
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Error (2017-04-22 18:01:39.9195) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.Passion' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.Passion'.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.UserType' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Users' does not exist on the type 'EFConnectWithChrist.UserType'.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail(String email) in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 63
+ Additional Info: There is no user with this email: sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:04:47.7224) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-04-22 18:05:18.4491) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:05:44.3519) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:06:03.4970) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:07:57.0088) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:08:41.6129) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:08:54.7128) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:08:56.2536) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:08:56.3734) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:08:56.6200) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:10:06.3652) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:10:14.6074) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:10:23.9721) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:10:29.3412) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:22:07.6216) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:22:14.8177) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:23:10.6094) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:23:14.4907) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:25:55.1574) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:26:13.7724) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:26:57.8200) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:02.0910) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:02.7402) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:02.8178) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:03.2878) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:03.3893) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:03.4589) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:03.7531) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:03.8787) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:04.6954) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:04.8127) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:04.9938) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:05.1605) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:05.3597) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:05.5703) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:05.7048) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:05.8677) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:06.0384) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:06.1951) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:06.3911) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:06.5741) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:27:06.8302) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:40.0633) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:42.6584) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:43.2665) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:43.3659) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:43.4473) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:30:50.8190) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:41:45.9785) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:41:49.4012) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:42:17.2446) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:44:09.4157) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:44:12.9206) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:44:30.0865) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:46:41.6420) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:47:17.3497) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:50:00.3213) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:50:23.7630) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:50:46.1302) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:51:06.4843) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:51:06.6131) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:51:15.4899) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:51:15.6363) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:04.6249) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:04.7296) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:09.6499) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:09.8199) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:29.3075) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-04-22 18:52:29.4524) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 

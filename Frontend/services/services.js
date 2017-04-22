@@ -184,18 +184,6 @@ function TimerReset(timerworker) {
     }
 };
 
-//factory service to get data from our Login Web API
-app.service("APIService", function ($http) {
-    this.getUsers = function (successCallback, errorCallback) {
-        $http.get("http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/LMS-1701LoginAPI/api/login")
-            .then(function (data) {
-                successCallback(data);
-            }, function (err) {
-                errorCallback(err);
-            });
-    };
-});
-
 (function () {
     'use strict';
 
@@ -213,7 +201,6 @@ app.service("APIService", function ($http) {
         return service;
 
         function Login(email, password, callback) {
-
             /* Dummy authentication for testing, uses $timeout to simulate api call
              ----------------------------------------------*/
             $timeout(function () {
@@ -221,7 +208,7 @@ app.service("APIService", function ($http) {
                 UserFactory.GetByEmail(email)
                     .then(function (user) {
                         if (user !== null && user.password === password) {
-                            response = { success: true, userType: user.UserType1.UserTypeName };
+                            response = { success: true, userType: user.UserType.UserTypeName };
                         } else {
                             response = { success: false, message: 'Email or password is incorrect. Please try again.' };
                         }

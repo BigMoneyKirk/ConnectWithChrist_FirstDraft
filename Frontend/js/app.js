@@ -19,7 +19,7 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
             .state('home', {
                 url: '/home',
                 templateUrl: 'views/newsfeed.html',
-                controller: 'associateWelcomeCtrl'
+                controller: 'profileCtrl'
             })
             /* from the list of exams from associateHome, this state presents the
              * settings for that exam
@@ -28,26 +28,6 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
                 url: '/profile',
                 templateUrl: 'views/profile.html',
                 controller: "profileCtrl"
-            })
-            // settings for a trainer to create rules for a particular exam template
-            .state('settings', {
-                url: '/settings',
-                templateUrl: 'views/settings.html',
-                controller: "associateExamSettingsCtrl"
-            })
-            // state where associate is taking an exam
-            .state('examinprogress', {
-                url: '/examinprogress',
-                views: {
-                    '': {
-                        templateUrl: 'views/examnavbar.html'  // adds a nav bar specific with just the timer in the top-right corner
-                    }
-                    ,
-                    'progress@examinprogress': {
-                        templateUrl: 'views/associateview_examinprogress.html',
-                    }
-                },
-                controller: 'associateInExamCtrl'
             })
             // if user is a trainer, this is the first state they will see 
             .state('trainerwelcome', {
@@ -62,18 +42,7 @@ var app = angular.module('ConnectWithChrist.Frontend', ['ui.router', 'ngSanitize
                         controller: 'trainerWelcomeCtrl'
                     }
                 }
-            })
-            .state('trainerChangeExistingExam', {
-                url: '/trainerChangeExistingExam',
-                templateUrl: 'views/trainerview_changeexistingexam.html',
-                controller: 'trainerChangeExistingExam'
-            })
-            .state('examQuestionView', {
-                url: '/examQuestionView',
-                templateUrl: 'views/examQuestionView.html',
-                controller: 'examViewController'
             });
-
     });
 
     run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
