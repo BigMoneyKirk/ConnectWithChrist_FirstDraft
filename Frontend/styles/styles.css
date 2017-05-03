@@ -23,19 +23,18 @@ h1{
  }
 
 html{
-	background-color: black;
+	background-image:url(../images/sunrise-1756274_1920.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
 }
 
 /*code that I got from offline: https://colorlib.com/wp/html5-and-css3-login-forms/ search: Transparent Login*/
  body{
 	margin:0;
 	color:#6a6f8c;
-	/*min-height: 100%;*/
-	background-size:100% 100%;
-    background-image:url(../images/sunrise-1756274_1920.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-    background-position: center;
+	background: none;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
 
