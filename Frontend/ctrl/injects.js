@@ -65,6 +65,11 @@ function ProfileInject(UserFactory, AuthenticationService, $rootScope, $scope, $
         if ($rootScope.globals.currentUser == undefined) {
             $location.path('/login');
         }
+        // if($scope.user != null){
+        //     //don't throw an error
+        //     console.log("lalalala!!");
+        //     // console.log($scope.user.FirstName + " " + $scope.user.LastName  + "is already logged in.");
+        // }
         UserFactory.GetByEmail($rootScope.globals.currentUser.email)
             .then(function (user) {
                 $scope.user = user;

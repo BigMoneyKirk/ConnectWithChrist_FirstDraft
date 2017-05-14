@@ -14,7 +14,7 @@
 
     <body ng-app="ConnectWithChrist.Frontend">
 
-      	<nav class="navbar navbar-inverse" role="navigation" ng-controller="collapseCtrl" ng-hide="inExam() == true">
+      	<nav class="navbar navbar-inverse" role="navigation" ng-controller="collapseCtrl">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
               <span class="sr-only">Toggle navigation</span>
@@ -28,6 +28,12 @@
               <!--TODO: Nav bar needs to be pruned; was designed this way for easier navigation while developing.-->
               <li><a ui-sref="home">Home</a></li>
               <li><a ui-sref="profile">Profile</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-center">
+              <li><a>Stephen</a></li>
+              <li><a>Becca</a></li>
+              <li><a>Mama</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
