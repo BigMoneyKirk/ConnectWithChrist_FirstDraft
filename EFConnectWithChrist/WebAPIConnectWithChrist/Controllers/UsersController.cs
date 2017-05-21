@@ -34,14 +34,13 @@ namespace WebAPIConnectWithChrist.Controllers
                 foreach(User usr in temp)
                 {
                     NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"User {usr.Firstname} {usr.Lastname} was retrieved."));
-                    // my problem is here...It is the AutoMapper...
                     userList.Add(AutoMapper.Mapper.Map<MOD.User>(usr));
                 }
                 return Request.CreateResponse(HttpStatusCode.OK, userList);
             }
             catch(InvalidOperationException ex)
             {
-                NLogConfig.logger.Error(ex, $"For some reason, the mapper is not be initialized.");
+                NLogConfig.logger.Error(ex, $"For some reason, the mapper is not being initialized.");
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
             catch(Exception ex)
@@ -82,18 +81,27 @@ namespace WebAPIConnectWithChrist.Controllers
         [ActionName("RegisterNewUser")]
         [Route("api/Users/RegisterNewUser")]
         [ResponseType(typeof(User))]
-        public HttpResponseMessage RegisterNewUser(MOD.User usr)
+        public async Task<IHttpActionResult> RegisterNewUser(MOD.User usr)
         {
             if (!ModelState.IsValid)
             {
                 NLogConfig.logger.Error($"This model state is not valid");
-                return Request.CreateResponse(HttpStatusCode.BadRequest, $"This model state is not valid");
+                return BadRequest($"This model state is not valid"); //(ModelState);
             }
 
             User dbuser = AutoMapper.Mapper.Map<User>(usr);
-            db.Users.Add(dbuser);
+            // need to overwrite the datetime that the user was added
+            dbuser.dayAndTimeJoined = DateTime.Now;
+            dbuser = db.Users.Add(dbuser);
+            db.Entry(dbuser).State = EntityState.Added;
+
+            // logging
             NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $"{usr.Firstname} {usr.Lastname} was added to the database."));
-            return Request.CreateResponse(HttpStatusCode.OK);
+
+            await db.SaveChangesAsync();
+            return Ok();
+            //return CreatedAtRoute("DefaultApi", new { id = usr.UserID }, usr);
+            //return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         // GET: api/Users/5

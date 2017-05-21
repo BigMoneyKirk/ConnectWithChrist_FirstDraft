@@ -1,3 +1,13 @@
+app.service("UserTypeService", function ($http){
+    this.getUserTypes = function (successCallback, errorCallback){
+        $http.get("http://localhost:57371/api/UserTypes/GetAllUserTypes").then(function (data) {
+            successCallback(data);
+        }, function (err) {
+            errorCallback(err);
+        })
+    }
+})
+
 app.service("getBatchInfoService", function ($http) {
     this.getBatch = function (email, successCallback, errorCallback) {
         $http.get("http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/UserBuffetService/api/batches/GetBatches?email=" + email)
@@ -20,42 +30,7 @@ app.service("examService", function ($http) {
     };
 });
 
-app.service("ExamTemplateService", function ($http) {
-    var domain = "http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/ExamAssessmentWebAPI/api/ExamTemplate/GetExam/"
-
-    var getExamTemplate = function (examTemplateID, successCallback, errorCallback) {
-        $http.get((domain + examTemplateID))
-            .then(function (data) {
-                successCallback(data);
-            }, function (err) {
-                errorCallback(err);
-            });
-    }
-
-    return {
-        getExamTemplate: getExamTemplate
-    }
-});
-
 app.service("examQuestionService", function ($http) {
-    this.getExamQuestions = function (examid, successCallback, errorCallback) {
-        $http.get("http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/ExamAssessmentWebAPI/api/ExamTemplate/GetExam/" + examid)
-            .then(function (data) {
-                successCallback(data);
-            }, function (err) {
-                errorCallback(err);
-            });
-    };
-
-    this.getAllQuestions = function (successCallback, errorCallback) {
-        $http.get("http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/ExamAssessmentWebAPI/api/ExamQuestion/GetAllExamQuestions")
-            .then(function (data) {
-                successCallback(data);
-            }, function (err) {
-                errorCallback(err);
-            });
-    };
-
     this.addQ = function (examTemplateID, question, successCallback, errorCallback) {
         $http.put("http://ec2-54-215-138-178.us-west-1.compute.amazonaws.com/ExamAssessmentWebAPI/api/ExamTemplate/AddQuestionToExam/?extid=" + examTemplateID + "&weight=1", JSON.stringify(question))
             .then(function (data) {
@@ -63,41 +38,7 @@ app.service("examQuestionService", function ($http) {
             }, function (err) {
                 console.log(err);
                 errorCallback(err);
-
             });
-    };
-
-});
-
-app.service("ExamData", function () {
-    var exam = {};
-
-    var batchExamSettingsData = {};
-
-    var examTemplateData = {};
-
-    var setBatchExamSettings = function (data) {
-        batchExamSettingsData = data;
-    }
-
-    var getBatchExamSettings = function () {
-        return batchExamSettingsData;
-    }
-
-    var setExamTemplateData = function (data) {
-        examTemplateData = data;
-    }
-
-    var getExamTemplateData = function () {
-        return examTemplateData;
-    }
-
-    return {
-        setBatchExamSettings: setBatchExamSettings,
-        getBatchExamSettings: getBatchExamSettings,
-        setExamTemplateData: setExamTemplateData,
-        getExamTemplateData: getExamTemplateData,
-        exam: exam
     };
 });
 
@@ -201,8 +142,6 @@ function TimerReset(timerworker) {
         return service;
 
         function Login(email, password, callback) {
-            /* Dummy authentication for testing, uses $timeout to simulate api call
-             ----------------------------------------------*/
             $timeout(function () {
                 var response;
                 UserFactory.GetByEmail(email)
@@ -226,25 +165,31 @@ function TimerReset(timerworker) {
         }
 
         function SignUp(firstname, lastname, email, password, phonenumber, passion, usertype){
-            UserFactory.RegisterNewUser(user)
-                .then(function(user1){
-                    if(user1 !== null){
-                        response = {success: true};
-                    }
-                    else{
-                        response = {success: false, message: 'I need more.'}
-                    }
-                })
+            $timeout(function () {
+                var response;
+                UserFactory.RegisterNewUser(user)
+                    .then(function(user1){
+                        if(user1 !== null)
+                        {
+                            response = {success: true};
+                        }
+                        else
+                        {
+                            response = {success: false, message: 'I need more.'}
+                        }
+                        callback(response);
+                    })
+            }, 1000);
         }
 
-        var SaveSettings = function (settingsData, successCallback, errorCallback) {
+        function SaveSettings(settingsData, successCallback, errorCallback) {
         $http.post((domain + "StoreSettings"), settingsData)
             .then(function (data) {
                 successCallback(data);
             }, function (err) {
                 errorCallback(err);
             });
-    };
+        };
 
         function SetCredentials(email, password) {
             var authdata = Base64.encode(email + ':' + password);

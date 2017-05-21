@@ -20,8 +20,8 @@ namespace EFConnectWithChrist
         public string email { get; set; }
         public string password { get; set; }
         public string phoneNumber { get; set; }
-        public Nullable<int> passionID { get; set; }
-        public System.DateTime dayAndTimeJoined { get; set; }
+        public int? passionID { get; set; }
+        public DateTime dayAndTimeJoined { get; set; }
         public int UserTypeID { get; set; }
     
         public virtual Passion Passion { get; set; }

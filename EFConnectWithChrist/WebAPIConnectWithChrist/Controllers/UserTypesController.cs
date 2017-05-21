@@ -1,6 +1,7 @@
-﻿using System;
+﻿using EFConnectWithChrist;
+using NLog;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -10,14 +11,47 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
-using WebAPIConnectWithChrist.Models;
+using WebAPIConnectWithChrist.App_Start;
+using MOD = WebAPIConnectWithChrist.Models;
 
 namespace WebAPIConnectWithChrist.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserTypesController : ApiController
     {
-        private WebAPIConnectWithChristContext db = new WebAPIConnectWithChristContext();
+        private ConnectWithChristEntities db = new ConnectWithChristEntities();
+
+        [HttpGet]
+        [ActionName("GetAllUserTypes")]
+        [Route("api/UserTypes/GetAllUserTypes")]
+        [ResponseType(typeof(UserType))]
+        public HttpResponseMessage GetAllUserTypes()
+        {
+            try
+            {
+                List<UserType> temp = db.UserTypes.ToList();
+                List<MOD.UserType> userTypeList = new List<MOD.UserType>();
+
+                foreach (var usertype in temp)
+                {
+                    NLogConfig.logger.Log(new LogEventInfo(LogLevel.Info, "Log_UsersController", $" {usertype.UserTypeName} is a usertype with ID {usertype.UserTypeID}."));
+                    userTypeList.Add(AutoMapper.Mapper.Map<MOD.UserType>(usertype));
+                }
+                return Request.CreateResponse(HttpStatusCode.OK, userTypeList);
+            }
+
+            catch (InvalidOperationException ex)
+            {
+                NLogConfig.logger.Error(ex, $"For some reason, the mapper is not being initialized.");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+
+            catch (Exception ex)
+            {
+                NLogConfig.logger.Error(ex, $"There is an error with the api routing.");
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
 
         // GET: api/UserTypes
         public IQueryable<UserType> GetUserTypes()

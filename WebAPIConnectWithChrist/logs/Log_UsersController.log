@@ -2043,3 +2043,799 @@ The required property 'Users' does not exist on the type 'EFConnectWithChrist.Us
 
 
  
+ ----------------------- Info (2017-05-20 17:29:05.0949) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetUserByEmail
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Stephen Kirkland has the email of sk01417@uga.edu
+
+
+ 
+ ----------------------- Info (2017-05-20 17:35:20.0450) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-05-20 17:35:20.0906) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Casper Ghost was retrieved.
+
+
+ 
+ ----------------------- Info (2017-05-20 17:36:00.2493) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-05-20 17:36:00.3270) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Casper Ghost was retrieved.
+
+
+ 
+ ----------------------- Error (2017-05-20 21:14:17.7334) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UserTypesController.cs:line 33
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Error (2017-05-20 21:25:50.4997) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UserTypesController.cs:line 32
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Error (2017-05-20 21:28:03.7625) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: System.Data.Entity.Core.MetadataException
+ Exception Message: Schema specified is not valid. Errors: 
+The relationship 'ConnectWithChristModel.FK__User__passionID__59063A47' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+The relationship 'ConnectWithChristModel.FK__User__UserTypeID__5812160E' was not loaded because the type 'ConnectWithChristModel.User' is not available.
+The following information may be useful in resolving the previous error:
+The property 'UserID' of type 'EFConnectWithChrist.User' in the assembly 'EFConnectWithChrist, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' cannot be used as a scalar property because it does not have both a getter and setter.
+
+
+ Stack Trace:    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers() in C:\Users\sk014\Desktop\Kirkland Enterprises\Coding\EFConnectWithChrist\WebAPIConnectWithChrist\Controllers\UsersController.cs:line 32
+ Additional Info: There is an error with the api routing.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:28:45.8241) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Stephen Kirkland was retrieved.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:28:46.0252) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UsersController.GetAllUsers
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: User Casper Ghost was retrieved.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:29:03.1660) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:29:03.1755) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:29:03.1835) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:59:31.3446) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:59:31.3626) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 21:59:31.3727) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:01:40.6445) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:01:40.6630) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:01:40.6736) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:03:29.9841) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:03:29.9961) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:03:29.9961) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:04:26.6501) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:04:27.1415) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:04:27.1731) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:05:03.0387) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:05:03.0743) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:05:03.0903) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:07:33.6879) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:07:33.6879) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:07:33.7084) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:08:35.7252) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:08:35.7393) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:08:35.7643) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:09:45.7513) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:09:45.7513) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:09:45.7753) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:14.1337) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:14.1462) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:14.1693) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:43.2038) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:43.2510) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:10:43.2640) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:26.5375) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:26.5485) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:26.5595) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:57.7605) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:57.7710) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:12:57.7815) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:13:51.2682) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:13:51.2817) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:13:51.2817) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:06.7304) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:06.7304) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:06.7690) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:23.6593) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:23.6593) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:14:23.6799) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:15:54.9996) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:15:54.9996) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:15:55.0161) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:18.7402) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:18.7467) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:18.7467) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:39.6287) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:39.6477) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:16:39.6612) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:18:34.2869) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:18:34.2979) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:18:34.3084) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:20:03.8202) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Founder is a usertype with ID 1.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:20:03.8292) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Boss is a usertype with ID 2.
+
+
+ 
+ ----------------------- Info (2017-05-20 22:20:03.8292) ----------------------
+ 
+ Call Site: WebAPIConnectWithChrist.Controllers.UserTypesController.GetAllUserTypes
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info:  Employee is a usertype with ID 3.
+
+
+ 

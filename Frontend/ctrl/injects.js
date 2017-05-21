@@ -1,11 +1,23 @@
 /// Login Inject
-LoginInject.$inject = ['$location', '$state', 'AuthenticationService', 'FlashFactory'];
-function LoginInject($location, $state, AuthenticationService, FlashFactory) {
+LoginInject.$inject = ['$scope', '$location', '$state', 'AuthenticationService', 'FlashFactory', 'UserTypeService'];
+function LoginInject($scope, $location, $state, AuthenticationService, FlashFactory, UserTypeService) {
+
+    // I really need to keep working on this function (last place I left off 05202017)
+    function successFunction(userTypes){
+        for (var i = 0; i < userTypes.data[0].length; i++) {
+            $scope.userTypes = userTypes.data[i];
+        }
+    }
+
+    function errorFunction(err){
+        $scope.userTypes = err;
+    }
 
     // got this code from http://jasonwatmore.com/post/2015/03/10/angularjs-user-registration-and-login-example-tutorial#projectstructure
     var vm = this;
 
     vm.login = login;
+    vm.signup = signup;
 
     function login() {
         // reset login status
@@ -22,32 +34,44 @@ function LoginInject($location, $state, AuthenticationService, FlashFactory) {
                 vm.dataLoading = false;
             }
         });
-    };
-}
+    }
 
-/// SignUp Inject
-SignUpInject.$inject = ['$location', 'AuthenticationService'];
-function SignUpInject($location, AuthenticationService) {
-
-    // got this code from http://jasonwatmore.com/post/2015/03/10/angularjs-user-registration-and-login-example-tutorial#projectstructure
-    var vm = this;
-
-    vm.signup = signup;
+// This once was its own signup class, but I learned a route cannot share more than one controller; I even tried
+// to import the controller using ng-controller in the respectable div tag, but alas, I decided to put this functionality
+// into the "login" inject.
 
     function signup() {
         vm.dataLoading = true;
-        AuthenticationService.SignUp(vm.user)
+        var user = {
+            Firstname: vm.firstname, 
+            Lastname: vm.lastname, 
+            Email: vm.email,
+            Password: vm.password,
+            Phonenumber: vm.phonenumber,
+            Passion: vm.passion,
+            UserType: vm.usertype
+        }
+
+        // everything below this line (only in the signup function) needs refactoring
+        $http.post("http://localhost:57371/api/Users/RegisterNewUser/", user);
+
+        AuthenticationService.SignUp(vm.firstname, vm.lastname, vm.email, vm.password, vm.phonenumber, vm.passion, vm.usertype)
             .then(function(response){
                 if(response.success){
+                    console.log("Success user: " + user); //here
+                    RegisterNewUser(user)
                     FlashFactory.Success('Thank you for being apart of the Connect With Christ Family!', true);
-                    $location.path('/login');
+                    // $location.path('/login');
                 }
                 else{
+                    console.log("What user is if it fails: " + user); //here
                     FlashFactory.Error(response.message);
                     vm.dataLoading = false;
                 }
             });
     }
+
+    UserTypeService.getUserTypes(successFunction, errorFunction);
 }
 
 /// Profile Inject
